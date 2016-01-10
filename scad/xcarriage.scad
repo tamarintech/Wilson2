@@ -86,6 +86,11 @@ module bearing_holders() {
 module mounting_screw_pattern() {
     
     rotate([90, 0, 0]) {
+        translate([0, 0, 24]) cylinder(r=4, h=4);
+        translate([0, 23, 24]) cylinder(r=4, h=4);
+        translate([23, 23, 24]) cylinder(r=4, h=4);
+        translate([23, 0, 24]) cylinder(r=4, h=4);
+        
         cylinder(r=mounting_screw_diameter/2, h=40, $fn=30);
         translate([0, 23, 0]) cylinder(r=mounting_screw_diameter/2, h=40, $fn=30);
         
